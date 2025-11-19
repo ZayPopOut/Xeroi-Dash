@@ -11,8 +11,8 @@ const __dirname = path.dirname(__filename);
 
 // Supabase client
 const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_KEY
+"https://rrbeijqfcldxmadkcqgp.supabase.co",
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJyYmVpanFmY2xkeG1hZGtjcWdwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM0ODA4MjEsImV4cCI6MjA3OTA1NjgyMX0.Ea0ZyZ3HgNrZMCfnLequOFHHprO95zNv_KcY8p6jdd0"
 );
 
 app.set("view engine", "ejs");
