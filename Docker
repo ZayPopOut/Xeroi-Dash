@@ -1,0 +1,21 @@
+# Use lightweight Node
+FROM node:18-alpine
+
+# Create app directory
+WORKDIR /app
+
+# Install only what's needed
+COPY package*.json ./
+RUN npm install --production
+
+# Copy rest of your project
+COPY . .
+
+# Expose the port Express uses
+EXPOSE 3000
+
+# Use environment variables for Supabase credentials
+ENV NODE_ENV=production
+
+# Start your server
+CMD ["node", "app.js"]
